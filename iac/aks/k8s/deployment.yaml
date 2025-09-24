@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weatherforecastapp-dev
+  namespace: weatherforecastapp-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weatherforecast-app
+  template:
+    metadata:
+      labels:
+        app: weatherforecast-app
+    spec:
+      imagePullSecrets:
+        - name: acr-pull-secret
+      containers:
+        - name: weatherforecast-app
+          image: triveniacr.azurecr.io/weatherforecastapp:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

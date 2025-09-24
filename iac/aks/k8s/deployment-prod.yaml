@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weatherforecastapp-prod
+  namespace: weatherforecastapp-prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weatherforecast-app
+  template:
+    metadata:
+      labels:
+        app: weatherforecast-app
+    spec:
+      # Ensure AKS can pull from ACR using the service principal secret
+      imagePullSecrets:
+        - name: acr-pull-secret
+
+      containers:
+        - name: weatherforecast-app
+          # Swap `latest` for your version tag, e.g. `1.0.0` or commit SHA
+          image: triveniacr.azurecr.io/weatherforecastapp:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

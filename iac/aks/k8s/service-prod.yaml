@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: weatherforecastapp-service
+  namespace: weatherforecastapp-prod    # must match your deployment namespace
+spec:
+  selector:
+    app: weatherforecast-app          # must match labels in deployment
+  ports:
+    - protocol: TCP
+      port: 80                       # service port exposed inside the cluster
+      targetPort: 8080               # container port your app listens on
+  type: LoadBalancer                 # Use ClusterIP for internal only; LoadBalancer for external access
