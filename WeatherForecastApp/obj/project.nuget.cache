@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Mg91Rs8aMlM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Triveni Maale\\OneDrive\\Documents\\DEVOPS\\weatherforecastwebapp\\WeatherForecastApp\\WeatherForecastApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Triveni Maale\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.16\\microsoft.netcore.app.ref.8.0.16.nupkg.sha512",
+    "C:\\Users\\Triveni Maale\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.16\\microsoft.windowsdesktop.app.ref.8.0.16.nupkg.sha512",
+    "C:\\Users\\Triveni Maale\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.16\\microsoft.aspnetcore.app.ref.8.0.16.nupkg.sha512",
+    "C:\\Users\\Triveni Maale\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.16\\microsoft.netcore.app.host.win-x64.8.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
